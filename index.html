@@ -168,16 +168,65 @@
 
     <button class="btn-trigger" onclick="desbloquearRecompensa()">[ EJECUTAR SECUENCIA: RECOMPENSA ]</button>
 
+       <!-- CONTENEDOR DE RECOMPENSA VISUAL (PARCHE DE CONTINGENCIA) -->
     <div class="reward-box" id="reward">
         <h3>🎉 ¡Misión de Aniversario Completada!</h3>
-        <p style="margin-top: 10px;">Tu hardware de confort ha sido desplegado con éxito en el mundo real.</p>
-        <!-- PASO 4: Modifica este texto con las coordenadas o el lugar real de tu casa donde escondas los regalos -->
-        <p style="margin-top: 15px; font-weight: bold; color: #b57c77;">>> Coordenadas: Busca dentro del armario principal, al lado de la nueva caja de Pepero coreanos.</p>
+        <p style="margin-top: 5px; font-size: 0.9rem; color: #7a6e6d;">[ Ecosistema v10.0 Adquirido con Éxito ]</p>
+        
+        <!-- Barra de Progreso de Envío -->
+        <div style="background: #eedec3; border-radius: 10px; height: 12px; width: 100%; margin: 20px 0; overflow:hidden; position:relative;">
+            <div style="background: #b57c77; height: 100%; width: 75%; border-radius: 10px; animation: pulseBar 2s infinite ease-in-out;"></div>
+        </div>
+        <p style="font-family: monospace; font-size: 0.85rem; color: #b57c77; font-weight: bold; margin-bottom: 20px;">
+            >> ESTADO: Paquete de Confort en Tránsito (75% Completado)
+        </p>
+
+        <!-- Tarjetas Visuales de los Regalos en Camino -->
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
+            
+            <!-- Tarjeta 1: El Perfume -->
+            <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; width: 160px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                <div style="font-size: 1.8rem; margin-bottom: 5px;">🦋</div>
+                <div style="font-size: 0.8rem; font-weight: bold;">La Bomba EDP</div>
+                <div style="font-size: 0.7rem; color: #888; margin-top: 2px;">Carolina Herrera</div>
+                <span style="display: inline-block; background: #fff3f2; color: #b57c77; font-size: 0.65rem; padding: 2px 6px; border-radius: 10px; margin-top: 8px; font-weight: bold;">En Tránsito</span>
+            </div>
+
+            <!-- Tarjeta 2: La Botella -->
+            <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; width: 160px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                <div style="font-size: 1.8rem; margin-bottom: 5px;">💧</div>
+                <div style="font-size: 0.8rem; font-weight: bold;">Owala FreeSip</div>
+                <div style="font-size: 0.7rem; color: #888; margin-top: 2px;">Edición Denim</div>
+                <span style="display: inline-block; background: #fff3f2; color: #b57c77; font-size: 0.65rem; padding: 2px 6px; border-radius: 10px; margin-top: 8px; font-weight: bold;">En Tránsito</span>
+            </div>
+
+            <!-- Tarjeta 3: El Kit de Arte / Masajes -->
+            <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; width: 160px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                <div style="font-size: 1.8rem; margin-bottom: 5px;">🎨</div>
+                <div style="font-size: 0.8rem; font-weight: bold;">Kit de Arte Premium</div>
+                <div style="font-size: 0.7rem; color: #888; margin-top: 2px;">Edición Creativa</div>
+                <span style="display: inline-block; background: #fff3f2; color: #b57c77; font-size: 0.65rem; padding: 2px 6px; border-radius: 10px; margin-top: 8px; font-weight: bold;">En Tránsito</span>
+            </div>
+
+        </div>
+
+        <p style="margin-top: 25px; font-size: 0.9rem; font-style: italic; color: #555;">
+            "Los servidores de transporte están procesando el envío físico. Mientras las cajas llegan a la puerta de casa, tu pase de acceso a los dulces de Costco ya está 100% activo en el salón. ¡Feliz Aniversario!"
+        </p>
     </div>
+
+    <!-- Estilo extra para la animación de la barra -->
+    <style>
+        @keyframes pulseBar {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; filter: brightness(1.1); }
+            100% { opacity: 0.8; }
+        }
+    </style>
 
     <script>
         // CONFIGURACIÓN DE TU FECHA DE INICIO: (Año, Mes - 1, Día, Hora, Minutos)
-        // Ejemplo: Si empezasteis el 15 de Octubre de 2016 -> (2016, 9, 15, 0, 0) Recuerda que Enero es 0, Febrero 1... Octubre es 9.
+        // Ejemplo: Si empezasteis el 15 de Octubre de 2016 -> (2016, 9, 15, 0, 0)
         const fechaInicio = new Date(2016, 9, 15, 0, 0, 0);
 
         function actualizarContador() {
@@ -201,5 +250,6 @@
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         }
     </script>
+
 </body>
 </html>
