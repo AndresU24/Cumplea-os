@@ -76,17 +76,6 @@
             height: 100%;
             object-fit: cover;
         }
-        .ost-box {
-            background: #fff9f8;
-            border: 1px dashed var(--accent-pink);
-            border-radius: 6px;
-            padding: 10px;
-            margin-top: 10px;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
         .btn-trigger {
             background-color: var(--text-color);
             color: #ffffff;
@@ -124,7 +113,7 @@
         <div class="counter-box" id="uptime-counter">Cargando base de datos del servidor...</div>
     </header>
 
-       <div class="timeline">
+    <div class="timeline">
         <!-- TEMPORADA 1 -->
         <div class="season-block">
             <div class="season-title">Temporada 1: El Episodio Piloto (Años 1-3)</div>
@@ -132,9 +121,9 @@
             <div class="photo-container">
                 <img src="foto1.jpg" alt="Vuestros inicios">
             </div>
-            <!-- Reproductor de Spotify Incrustado: Beautiful (Goblin) -->
             <div style="margin-top: 15px;">
-                <iframe style="border-radius:12px" src="https://spotify.com/5qaEfEh1AtSdrdrByCP7qR" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <!-- Reproductor Oficial: Demons - Imagine Dragons -->
+                <iframe style="border-radius:12px" src="https://spotify.com" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
 
@@ -145,9 +134,9 @@
             <div class="photo-container">
                 <img src="foto2.jpg" alt="Vuestra consolidación">
             </div>
-            <!-- Reproductor de Spotify Incrustado: Christmas Tree (Our Beloved Summer) -->
             <div style="margin-top: 15px;">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/track/0tgnTzjIkj8mVVEh0SNH0t?si=3Sap8Ql8SQCPRvEaPYeaKQ&utm_source=whatsapp" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <!-- Reproductor Oficial: Secrets - OneRepublic -->
+                <iframe style="border-radius:12px" src="https://spotify.com" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
 
@@ -158,23 +147,19 @@
             <div class="photo-container">
                 <img src="foto3.jpg" alt="Momento reciente">
             </div>
-            <!-- Reproductor de Spotify Incrustado: Sunset (Crash Landing on You) -->
             <div style="margin-top: 15px;">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/track/0FHNqVPxu14WivXR4Y2hFr?si=35GPzrBgTeCky5nMFHzpig&utm_source=whatsapp" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <!-- Reproductor Oficial: Creo en Ti - Reik -->
+                <iframe style="border-radius:12px" src="https://spotify.com" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
     </div>
 
-
     <button class="btn-trigger" onclick="desbloquearRecompensa()">[ EJECUTAR SECUENCIA: RECOMPENSA ]</button>
 
-       <!-- CONTENEDOR DE RECOMPENSA VISUAL (PARCHE DE CONTINGENCIA) -->
-       <!-- CONTENEDOR DE RECOMPENSA VISUAL (PARCHE DE CONTINGENCIA OPTIMIZADO) -->
     <div class="reward-box" id="reward">
         <h3>🎉 ¡Misión de Aniversario Completada!</h3>
         <p style="margin-top: 5px; font-size: 0.9rem; color: #7a6e6d;">[ Ecosistema v10.0 Adquirido con Éxito ]</p>
         
-        <!-- Barra de Progreso de Envío -->
         <div style="background: #eedec3; border-radius: 10px; height: 12px; width: 100%; margin: 20px 0; overflow:hidden; position:relative;">
             <div style="background: #b57c77; height: 100%; width: 75%; border-radius: 10px; animation: pulseBar 2s infinite ease-in-out;"></div>
         </div>
@@ -182,10 +167,7 @@
             >> ESTADO: Paquete de Confort en Tránsito (75% Completado)
         </p>
 
-        <!-- Tarjetas Visuales de los Regalos en Camino (Balanceado a 2 Elementos) -->
         <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
-            
-            <!-- Tarjeta 1: El Perfume -->
             <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 8px; padding: 15px; width: 180px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
                 <div style="font-size: 2rem; margin-bottom: 5px;">🦋</div>
                 <div style="font-size: 0.85rem; font-weight: bold;">La Bomba EDP</div>
@@ -193,14 +175,12 @@
                 <span style="display: inline-block; background: #fff3f2; color: #b57c77; font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; margin-top: 10px; font-weight: bold;">En Tránsito</span>
             </div>
 
-            <!-- Tarjeta 2: La Botella -->
             <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 8px; padding: 15px; width: 180px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
                 <div style="font-size: 2rem; margin-bottom: 5px;">💧</div>
                 <div style="font-size: 0.85rem; font-weight: bold;">Owala FreeSip</div>
                 <div style="font-size: 0.75rem; color: #888; margin-top: 2px;">Edición Denim</div>
                 <span style="display: inline-block; background: #fff3f2; color: #b57c77; font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; margin-top: 10px; font-weight: bold;">En Tránsito</span>
             </div>
-
         </div>
 
         <p style="margin-top: 25px; font-size: 0.9rem; font-style: italic; color: #555;">
@@ -208,8 +188,6 @@
         </p>
     </div>
 
-
-    <!-- Estilo extra para la animación de la barra -->
     <style>
         @keyframes pulseBar {
             0% { opacity: 0.8; }
@@ -220,8 +198,8 @@
 
     <script>
         // CONFIGURACIÓN DE TU FECHA DE INICIO: (Año, Mes - 1, Día, Hora, Minutos)
-        // Ejemplo: Si empezasteis el 15 de Octubre de 2016 -> (2016, 9, 15, 0, 0)
-        const fechaInicio = new Date(2016, 4, 24, 0, 0, 0);
+        // Sustituye los valores numéricos si quieres cuadrar los días exactos
+        const fechaInicio = new Date(2016, 9, 15, 0, 0, 0);
 
         function actualizarContador() {
             const ahora = new Date();
@@ -233,17 +211,4 @@
             const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
             document.getElementById('uptime-counter').innerHTML = 
-                `Sistemas Activos: 10 Años | ${dias} días | ${horas}h | ${minutos}m | ${segundos}s juntos.`;
-        }
 
-        setInterval(actualizarContador, 1000);
-        actualizarContador();
-
-        function desbloquearRecompensa() {
-            document.getElementById('reward').style.display = 'block';
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-        }
-    </script>
-
-</body>
-</html>
